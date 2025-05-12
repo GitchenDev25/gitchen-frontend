@@ -58,7 +58,8 @@ const fetchInitialData = async () => {
     const mealIds = uniqueMeals.map(m => m.idMeal);
 
     // Step 3: Fetch all reviews
-    const reviewsRes = await fetch('http://localhost:5000/api/reviews');
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+    const reviewsRes = await fetch(`${API_BASE}/api/reviews`);
     const reviews = await reviewsRes.json();
 
     // Step 4: Group reviews by mealId

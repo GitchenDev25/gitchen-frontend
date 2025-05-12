@@ -21,7 +21,7 @@ export default function RecipeReviews({ mealId }) {
     useEffect(() => {
     const fetchReviews = async () => {
         try {
-        const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
         const res = await axios.get(`${API_BASE}/api/reviews/${mealId}`);
         setReviews(res.data || []);
         if (userId) {
@@ -56,7 +56,7 @@ export default function RecipeReviews({ mealId }) {
         comment,
         };
 
-        const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
         const url = `${API_BASE}/api/reviews/${mealId}`;
         const method = userReview ? 'put' : 'post';
 
@@ -74,7 +74,7 @@ export default function RecipeReviews({ mealId }) {
 
     const handleDelete = async (reviewId) => {
     try {
-        const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000';
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
         
         // Only one delete request is needed
         await axios.delete(`${API_BASE}/api/reviews/${mealId}/${reviewId}`, {
