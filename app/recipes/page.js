@@ -140,7 +140,8 @@ const handleSearch = async (type = searchType, value = query) => {
     }
 
     // ✅ Get all reviews from the backend
-    const reviewsRes = await fetch('http://localhost:5000/api/reviews');
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+    const reviewsRes = await fetch(`${API_BASE}/api/reviews`);
     const reviews = await reviewsRes.json();
 
     // Group reviews by mealId
