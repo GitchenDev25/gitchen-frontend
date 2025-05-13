@@ -159,13 +159,7 @@ export default async function RecipePage({params}) {
             </section>
           )}
 
-          {/* Recipe Actions */}
-          <div className="no-print">
-            <RecipeActions meal={meal} />
-            <SocialShare />
-          </div>
-
-          {/* Extra Fields */}
+                    {/* Extra Fields */}
           {extraFields.length > 0 && (
             <section>
               <h2 className="text-3xl font-semibold text-[#D00000] mb-4">📎 Additional Info</h2>
@@ -183,6 +177,14 @@ export default async function RecipePage({params}) {
               </ul>
             </section>
           )}
+
+          {/* Recipe Actions */}
+          <div className="no-print">
+            <RecipeActions meal={meal} />
+            <SignedIn>
+              <SocialShare />
+            </SignedIn>
+          </div>
         </div>
 
         {/* // Inside the return statement */}

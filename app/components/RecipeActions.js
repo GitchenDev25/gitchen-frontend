@@ -192,7 +192,7 @@ export default function RecipeActions({ meal }) {
           <SignInButton>
             <span className="text-[#D00000] underline cursor-pointer">Sign in</span>
           </SignInButton>{' '}
-          to save or export this recipe.
+          to save, share or export this recipe.
         </p>
       </SignedOut>
     </div>
