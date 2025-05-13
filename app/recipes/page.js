@@ -254,7 +254,7 @@ export default function RecipesPage() {
                 >
                     🔍 Search
                 </button>
-                <select
+                {/* <select
                     value={searchType}
                     onChange={e => setSearchType(e.target.value)}
                     className="border border-gray-300 px-4 py-2 rounded-md w-full focus:ring-2 focus:ring-red-400"
@@ -264,7 +264,7 @@ export default function RecipesPage() {
                     <option value="category">Category</option>
                     <option value="ingredient">Ingredient</option>
                     <option value="area">Country</option>
-                </select>
+                </select> */}
 
                 {/* Filter Options */}
                 <SignedIn>

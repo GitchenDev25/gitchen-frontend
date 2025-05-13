@@ -25,6 +25,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.btn {
+  @apply flex items-center gap-2 bg-[#D00000] text-white px-3 py-1.5 rounded-full text-sm hover:opacity-90 disabled:opacity-40;
+}
+
+
 @media print {
   body {
     background: white !important;
