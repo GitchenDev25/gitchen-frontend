@@ -480,7 +480,7 @@ export default function RecipesPage() {
               ))}
             </section>
           ) : (
-            <p className="text-center text-gray-500">No recipes found.</p>
+            <p className="text-center text-gray-500">No recipes found. Refresh the page and try again</p>
           )}
         </main>
     </SiteLayout>

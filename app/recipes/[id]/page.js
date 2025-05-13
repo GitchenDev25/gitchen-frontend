@@ -12,6 +12,7 @@ import SiteLayout from '@/app/components/SiteLayout';
 import RecipeReviews from '@/app/components/RecipeReviews';
 import Recommendations from '@/app/components/Recomendations';
 import ReadAloudButton from '@/app/components/ReadAloudButton';
+import SocialShare from '@/app/components/SocialShare';
 
 export async function generateMetadata({ params }) {
   return {
@@ -161,6 +162,7 @@ export default async function RecipePage({params}) {
           {/* Recipe Actions */}
           <div className="no-print">
             <RecipeActions meal={meal} />
+            <SocialShare />
           </div>
 
           {/* Extra Fields */}
